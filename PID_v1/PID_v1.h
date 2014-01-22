@@ -33,7 +33,7 @@ typedef struct
 	char inAuto;
 }PID_T;
 
-PID_PidInit(PID_T *pid, float* Input, float* Output, float* Setpoint,
+void PID_PidInit(PID_T *pid, float* Input, float* Output, float* Setpoint,
             float Kp, float Ki, float Kd, int ControllerDirection);
 char PID_Compute(PID_T *pid);
 void PID_SetTunings(PID_T *pid, float Kp, float Ki, float Kd);
