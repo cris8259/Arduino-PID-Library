@@ -33,6 +33,15 @@ typedef struct
 	char inAuto;
 }PID_T;
 
+PID_PidInit(PID_T *pid, float* Input, float* Output, float* Setpoint,
+            float Kp, float Ki, float Kd, int ControllerDirection);
+char PID_Compute(PID_T *pid);
+void PID_SetTunings(PID_T *pid, float Kp, float Ki, float Kd);
+void PID_SetSampleTime(PID_T *pid, int NewSampleTime);
+void PID_SetOutputLimits(PID_T *pid, float Min, float Max);
+void PID_SetMode(PID_T *pid, int Mode);
+void PID_SetControllerDirection(PID_T *pid, int Direction);
+
 
 #endif
 
