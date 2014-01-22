@@ -20,7 +20,7 @@
 PID_PidInit(PID_T *pid, float* Input, float* Output, float* Setpoint,
         float Kp, float Ki, float Kd, int ControllerDirection)
 {
-	
+	memset(pid,0x0,sizeof(PID_T));
     pid->myOutput = Output;
     pid->myInput = Input;
     pid->mySetpoint = Setpoint;
