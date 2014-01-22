@@ -12,8 +12,8 @@
  *    The parameters specified here are those for for which we can't set up 
  *    reliable defaults, so we need to have the user set them.
  ***************************************************************************/
-PID_PidInit(PID_T *pid, float* Input, float* Output, float* Setpoint,
-        float Kp, float Ki, float Kd, int ControllerDirection)
+void PID_PidInit(PID_T *pid, float* Input, float* Output, float* Setpoint,
+        	float Kp, float Ki, float Kd, int ControllerDirection)
 {
 	memset(pid,0x0,sizeof(PID_T));
     pid->myOutput = Output;
